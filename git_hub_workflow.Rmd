@@ -81,31 +81,31 @@ Basically, I'll maintain the code archive. I encourage you to use my code and, a
 
 This is the most basic GitHub-based workflow, and will require you to, at a minimum, create a GitHub account.  Once you've got a GitHub account, go on to [GitHub](https://github.com/leachandrew) and find the repository you want.  For example, if you're looking for AESO scrapers, you could choose the [alberta_power](https://github.com/leachandrew/alberta_power) repository. 
 
-![](repo.png)
+![](images/repo.png)
 The repository contains all the files I've posted for you for use of Alberta power data. You want to then create a 'fork' to create a version of the files on your own GitHub repository.  So, for example, if I want to use some files from Jens von Bergmann, I can go to his repository and create a fork of his Doodles repository:
-![](fork_jens.png)
+![](images/fork_jens.png)
 
 You can then download all the files in the repository using the Clone or Download link, depending on how you want to set things up on own home machine.  Once you have the files on your machine, use them as you like, edit them, etc. but maintain the same file names.  You can then, upload the files back to your forked repository. Name the commit (the upload) and make sure you add some comments about it to tell me what's going on.
 
-![](upload_files.png)
+![](images/upload_files.png)
 When you've reached a point that you think the changes are useful for others, you can create a pull request. In this way, you're asking me to 'pull' your files into the master repository.  In the case I've just built, it would look like this.
 
-![](pull_request.png)
+![](images/pull_request.png)
 Once you've created the pull request, you'll get a screen like this where you can add more comments to explain what you've done.  A good pull request would contain not only the changed files, but also some testing results that show what it does.
 
-![](pull_request_2.png)
+![](images/pull_request_2.png)
 
 When you send me a pull request to assess the changes, I'll be able to see a line-by-line comparison, I'll be able to test the files, etc.  If everything looks good, then I can merge your pull request into my master repository.  The next time a member of the team downloads the repository, they'll get your modified version of the files.
 
 
 This leads to an important point about repo management.  If you look at my forked repo from Jens, it's way out-of-date, so I was at risk of modifying a file that's already been modified by Jens or others.  AS a result, you want to make sure to keep your repo up-to-date.  This is where GitHub is a bit cumbersome and not-at-all intuitive, but here are the [instructions](https://github.com/KirstieJane/STEMMRoleModels/wiki/Syncing-your-fork-to-the-original-repository-via-the-browser) to do it via your browser only.
 
-![](updated_fork.png)
+![](images/updated_fork.png)
 You can see that my fork is now up-to-date.
 
 You can and should also use GitHub for version control.  Unfortunately, you can't do that with the browser alone.  So, for example, if I decided that I wanted to revert to a previous version of my online repository, I'd have to manually revert the file upload by clicking on the file and then clicking on the delete icon. Once you get there, you'll be asked if you want to 'commit' the changes, which you can do.
 
-![](delete_file.png)
+![](images/delete_file.png)
 
 
 
@@ -116,7 +116,16 @@ You can and should also use GitHub for version control.  Unfortunately, you can'
 This is the most basic workflow, and doesn't require much of a change from you.  To access the files, log on to [GitHub](https://github.com/leachandrew) and find the repository you want.  For example, if you're looking for AESO scrapers, you could choose the [alberta_power](https://github.com/leachandrew/alberta_power) repository. 
 
 
-![](repo.png)
+![](images/repo.png)
 The repository contains all the files I've posted for you for use of Alberta power data. You can download all the files in the repository using the Clone or Download link.  Once you have the files on your machine, use them as you like, edit them, etc. but maintain the same file names.  You can then, if you want to propose some changes, send me back the files you want to change and I'll deal with them on GitHub.
 
+## Branches
+When several people are working on the same code base, it's sometimes useful to share your work and changes with others before they get merged into the "master" repository. Or you want to make some changes to the code, while at the same time still work with the existing codebase on some other aspect.
+
+For this we use [**branches**](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell). A branch gives the freedom to work with the code base and try out things without affecting any other part. With the option to merge it back into the "master" branch. Branches can easily created from the command line using `git checkout -b <branch name>` or in RStudio.
+![RStudio branches](images/branches_rstudio.png)
+
+We can then commit the changes and push the branch to the original repository and issue a pull request. Others can then download the branch, test if the changes work for them, add to the branch. When all changes look good, the bransh can be merged back into the "master" branch.
+
+It's almost always a good idea to make changes in a branch, even if the intention is to merge the changes into master right away.
 
